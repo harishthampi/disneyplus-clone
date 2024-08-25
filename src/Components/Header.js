@@ -15,22 +15,22 @@ export default function Header() {
                 <img src='/images/home-icon.svg' alt='home'/>
                 <span>HOME</span>
             </a>
-            <a>
+            <StyledButton onClick={() => alert('Button clicked')}>
                 <img src='/images/search-icon.svg' alt='SEARCH'/>
-                <span>SEARCH</span>
-            </a>
-            <a>
+                <Span class>SEARCH</Span>
+            </StyledButton>
+            <StyledButton onClick={() => alert('Button clicked')}>
                 <img src='/images/original-icon.svg' alt='ORIGINAL'/>
-                <span>ORIGINAL</span>
-            </a>
-            <a>
+                <Span>ORIGINAL</Span>
+            </StyledButton>
+            <StyledButton onClick={() => alert('Button clicked')}>
                 <img src='/images/movie-icon.svg' alt='MOVIES'/>
-                <span>MOVIES</span>
-            </a>
-            <a>
+                <Span>MOVIES</Span>
+            </StyledButton>
+            <StyledButton onClick={() => alert('Button clicked')}>
                 <img src='/images/series-icon.svg' alt='SERIES'/>
-                <span>SERIES</span>
-            </a>
+                <Span>SERIES</Span>
+            </StyledButton>
         </NavMenu>
 
         <SignOut>
@@ -133,3 +133,47 @@ const NavMenu = styled.div`
 const DropDown = styled.div``
 
 const SignOut = styled.div``
+
+const StyledButton = styled.button`
+  background: none;
+  border: none;
+  padding-bottom: 3px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  color:white;
+
+  img {
+    width: 40px;
+    height: 30px;
+  }
+
+`
+const Span = styled.span`
+            color:rgb(249,249,249);
+            font-size:13px;
+            text-transform:uppercase;
+            line-height:1.08;
+            padding:2px 0;
+            letter-spacing:1.42;
+            white-space:nowrap;
+            position:relative;
+
+            &:before{
+                content:"";
+                background-color:rgb(249,249,249);            
+                border-radius: 0px 0px 4px 4px;
+                bottom: -6px;
+                height:2px;
+                left:0px;
+                width:auto;
+                position:absolute;
+                right:0px;
+                transform-origin:left center;
+                opacity:0;
+                transition: all 250ms cubic-beizer(0.25,0.46,0.45,0.94);
+                visibility:hidden;
+                transform:scaleX(0);
+   }
+`

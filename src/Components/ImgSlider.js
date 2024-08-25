@@ -16,24 +16,24 @@ export default function ImgSlider() {
   return (
     <Carousel {...settings}>
       <Wrap>
-        <a>
+        <StyledButton onClick={() => alert('Button clicked')}>
           <img src='./images/slider-badag.jpg' alt="" />
-        </a>
+        </StyledButton>
       </Wrap>
       <Wrap>
-        <a>
+        <StyledButton onClick={() => alert('Button clicked')}>
           <img src='./images/slider-badging.jpg' alt="" />
-        </a>
+        </StyledButton>
       </Wrap>
       <Wrap>
-        <a>
+        <StyledButton onClick={() => alert('Button clicked')}>
           <img src='./images/slider-scale.jpg' alt="" />
-        </a>
+        </StyledButton>
       </Wrap>
       <Wrap>
-        <a>
+        <StyledButton onClick={() => alert('Button clicked')}>
           <img src='./images/slider-scales.jpg' alt="" />
-        </a>
+        </StyledButton>
       </Wrap>
     </Carousel>
   )
@@ -108,4 +108,25 @@ const Wrap = styled.div`
         }
 
     }
+`
+const StyledButton = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    padding: 0;
+    border: 4px solid rgba(249, 249, 249, 0.8);
+    transition-duration: 300ms;
+  }
 `
