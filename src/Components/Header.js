@@ -23,11 +23,11 @@ export default function Header() {
                 <img src='/images/original-icon.svg' alt='ORIGINAL'/>
                 <span>ORIGINAL</span>
             </a>
-            <a >
+            <a>
                 <img src='/images/movie-icon.svg' alt='MOVIES'/>
                 <span>MOVIES</span>
             </a>
-            <a >
+            <a>
                 <img src='/images/series-icon.svg' alt='SERIES'/>
                 <span>SERIES</span>
             </a>
